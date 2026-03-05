@@ -2,88 +2,121 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Formulario de Usuario</title>
+<title>Formulario Moderno</title>
 
 <style>
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    background-color: rgb(236, 231, 209);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background: linear-gradient(135deg, rgb(236,231,209), rgb(219,206,165));
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.formulario{
-    background-color: rgb(219, 206, 165);
-    padding: 30px;
-    border-radius: 10px;
-    width: 320px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+.contenedor{
+    background:white;
+    width:350px;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-.formulario h2{
-    text-align: center;
-    color: rgb(138, 118, 80);
-    margin-bottom: 20px;
+.contenedor h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:rgb(138,118,80);
 }
 
-label{
-    display: block;
-    margin-top: 10px;
-    color: rgb(138, 118, 80);
-    font-weight: bold;
+.campo{
+    margin-bottom:18px;
 }
 
-input{
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid rgb(142, 151, 125);
-    border-radius: 5px;
-    box-sizing: border-box;
+.campo label{
+    display:block;
+    margin-bottom:5px;
+    font-size:14px;
+    color:rgb(138,118,80);
+    font-weight:600;
+}
+
+.campo input{
+    width:100%;
+    padding:10px;
+    border:2px solid rgb(142,151,125);
+    border-radius:6px;
+    outline:none;
+    transition:0.3s;
+    font-size:14px;
+}
+
+.campo input:focus{
+    border-color:rgb(138,118,80);
+    box-shadow:0 0 5px rgba(138,118,80,0.3);
 }
 
 button{
-    width: 100%;
-    margin-top: 20px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(142, 151, 125);
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    background:rgb(142,151,125);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
 }
 
 button:hover{
-    background-color: rgb(138, 118, 80);
+    background:rgb(138,118,80);
+    transform:translateY(-2px);
+    box-shadow:0 6px 10px rgba(0,0,0,0.2);
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="formulario">
-    <h2>Registro de Usuario</h2>
+<div class="contenedor">
 
-    <form>
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required>
+<h2>Registro</h2>
 
-        <label for="apellido">Apellido</label>
-        <input type="text" id="apellido" name="apellido" required>
+<form>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+<div class="campo">
+<label>Nombre</label>
+<input type="text" required>
+</div>
 
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono" required>
+<div class="campo">
+<label>Apellido</label>
+<input type="text" required>
+</div>
 
-        <button type="submit">Enviar</button>
-    </form>
+<div class="campo">
+<label>Email</label>
+<input type="email" required>
+</div>
+
+<div class="campo">
+<label>Teléfono</label>
+<input type="tel" required>
+</div>
+
+<button type="submit">Enviar</button>
+
+</form>
+
 </div>
 
 </body>
